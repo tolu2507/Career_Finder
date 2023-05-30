@@ -4,16 +4,15 @@ export function Login() {
   const backgroundImageUrl = "url(/images/background.png)";
 
   return (
-    <div className="relative">
+    <div className="relative min-w-[700px]">
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat bg-center"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-center min-w-[700px]"
         style={{ backgroundImage: backgroundImageUrl }}
       />
-      <div className="absolute inset-0 bg-blue-700 opacity-70" />
+      <div className="absolute inset-0 bg-blue-700 opacity-70 min-w-[700px]" />
 
       {/* Content of the project */}
       <LoginComponent />
     </div>
   );
-}
-//  h-[100px]
+};

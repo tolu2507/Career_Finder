@@ -6,12 +6,12 @@ const { Title } = Typography;
 
 export function TitleSubComponent() {
   return (
-    <div className="flex items-center space-x-2">
-      <div className=" bg-blue-600 w-12 flex rounded-lg h-12 items-center justify-center">
-        <InfoCircleOutlined style={{ fontSize: 30 }} />
+    <div className="flex items-center justify-center space-x-2">
+      <div className=" bg-blue-600 w-10 flex rounded-lg h-10 items-center justify-center">
+        <InfoCircleOutlined style={{ fontSize: 25 }} />
       </div>
-      <div className="h-12 text-red-900">
-        <Title level={1} style={{ color: "white" }}>
+      <div className="h-10 text-red-900">
+        <Title level={2} style={{ color: "white" }}>
           {CONSTANT.TITLE}
         </Title>
       </div>

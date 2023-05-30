@@ -1,9 +1,9 @@
 export const CONSTANT = {
-  CONTINUEWITHGOGGLE: "Continue With Google",
+  CONTINUEWITHGOGGLE: "Continue with Google",
   SECURED: "Secured Connection",
   FORGOT_PASSWORD: "Forgot Password ?",
   TITLE: "Expaat",
-  LOGIN: "Log In",
+  LOGIN: "Log in",
   CARD_PARAGRAPH_TEXT:
     "Hiring process is seamless and efficient, you dont need to wait for weeks Hiring happens in the now.",
   TOP_5: "Top 5%",

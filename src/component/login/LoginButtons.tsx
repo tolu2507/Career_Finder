@@ -1,34 +1,48 @@
 import { Typography, Button, Divider } from "antd";
-import { GoogleCircleFilled } from "@ant-design/icons";
+import { FcGoogle } from "react-icons/fc";
 import { CONSTANT } from "../../constants";
+import twStyled from "tailwind-styled-components";
 
 const { Text } = Typography;
+
+const StyledDividerOr = twStyled.div`
+   items-center text-center px-3 py-2 justify-center text-[#696f86] border rounded-full ;
+`;
+const StyledButtonDefault = twStyled(Button)`
+  border-[#808195] border-2 hover:bg-teal-200 w-[100%] h-16 ;
+`;
+const StyledButton = twStyled(Button)`
+  bg-[#04adc0] text-[18px] text-white hover:bg-teal-200 w-[100%] h-16 border-0;
+`;
+const StyledButtonWrapper = twStyled.div`
+  my-5 ;
+`;
+const StyledText = twStyled(Text)`
+  text-[18px] text-[#808195] font-semibold ;
+`;
+const StyledDiv = twStyled.div`
+  flex items-center space-x-8 justify-center ;
+  `;
 
 export function LoginButtons({ handleClick }: { handleClick: () => void }) {
   return (
     <>
-      <div className="my-10">
-        <Button
-          className="bg-teal-500 text-[18px] font-semibold hover:bg-teal-200 w-[100%] h-16 border-0"
-          onClick={handleClick}
-        >
-          LOG IN
-        </Button>
-      </div>
-      <Divider>OR</Divider>
-      <div className="my-10">
-        <Button
-          className="hover:bg-teal-200 w-[100%] h-16"
-          icon={
-            <GoogleCircleFilled style={{ fontSize: 40, marginRight: 20 }} />
-          }
-          onClick={handleClick}
-        >
-          <Text className="text-[18px] font-semibold">
-            {CONSTANT.CONTINUEWITHGOGGLE}
-          </Text>
-        </Button>
-      </div>
+      <StyledButtonWrapper>
+        <StyledButton onClick={handleClick}>Log in</StyledButton>
+      </StyledButtonWrapper>
+      <Divider>
+        <StyledDividerOr>Or</StyledDividerOr>
+      </Divider>
+      <StyledButtonWrapper>
+        <StyledButtonDefault onClick={handleClick}>
+          {/* <FcGoogle />
+           */}
+          <StyledDiv>
+            <FcGoogle size={34} />
+            <StyledText>{CONSTANT.CONTINUEWITHGOGGLE}</StyledText>
+          </StyledDiv>
+        </StyledButtonDefault>
+      </StyledButtonWrapper>
     </>
   );
 }

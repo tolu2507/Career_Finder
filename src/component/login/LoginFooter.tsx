@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
 import { Typography } from "antd";
-const { Text } = Typography;
+import twStyled from "tailwind-styled-components";
 
+const { Text } = Typography;
+const StyledText = twStyled(Text)`
+  text-center text-[#b7bdc9] ;
+  `;
 export function LoginFooter() {
   return (
-    <div className=" text-center">
-      <Text className=" text-center">
-        No Account yet Join Expaat as
-        <Link to="/register"> FREELANCER</Link> or
-        <Link to="/register"> COMPANY</Link>
-      </Text>
+    <div className=" text-center mt-16">
+      <StyledText>
+        No account yet ? Join Expaat as a<Link to="/register"> freelancer</Link>{" "}
+        or
+        <Link to="/register"> company</Link>
+      </StyledText>
       <br />
-      <Text>Copyright 2013 - 2023 Expaat, LLC </Text>
+      <StyledText>Copyright 2013-2023 Expaat, LLC </StyledText>
     </div>
   );
 }
