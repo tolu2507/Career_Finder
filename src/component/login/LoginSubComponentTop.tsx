@@ -7,8 +7,6 @@ import { INPUT, LoginInput } from "./LoginInpt";
 import { LoginCheckBox, LoginSecuredtext } from "./LoginSecuredText";
 import { CONSTANT } from "../../constants";
 import { useNavigate } from "react-router-dom";
-import { MailOutlined, LockOutlined } from "@ant-design/icons";
-// import styled from "styled-components";
 import twStyled from "tailwind-styled-components";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
