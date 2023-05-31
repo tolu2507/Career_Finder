@@ -3,7 +3,7 @@ import { useMutation, gql } from "@apollo/client";
 import { Typography } from "antd";
 import { LoginButtons } from "./LoginButtons";
 import { LoginFooter } from "./LoginFooter";
-import { INPUT, LoginInput } from "./LoginInpt";
+import { INPUT, LoginInput } from "../../common/Input";
 import { LoginCheckBox, LoginSecuredtext } from "./LoginSecuredText";
 import { CONSTANT } from "../../constants";
 import { useNavigate } from "react-router-dom";
@@ -35,12 +35,18 @@ export function LoginComponentContent() {
     {
       value: email,
       setChange: () => setEmail,
-      prefix: <AiOutlineMail size={20} color="#97a6bf" />,
+      prefix: {
+        data: <AiOutlineMail size={20} color="#97a6bf" />,
+        position: "left",
+      },
     },
     {
       value: password,
       setChange: () => setPassword,
-      prefix: <BiLockAlt size={20} color="#97a6bf" />,
+      prefix: {
+        data: <BiLockAlt size={20} color="#97a6bf" />,
+        position: "left",
+      },
     },
   ];
 

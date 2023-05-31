@@ -35,8 +35,6 @@ export function LoginButtons({ handleClick }: { handleClick: () => void }) {
       </Divider>
       <StyledButtonWrapper>
         <StyledButtonDefault onClick={handleClick}>
-          {/* <FcGoogle />
-           */}
           <StyledDiv>
             <FcGoogle size={34} />
             <StyledText>{CONSTANT.CONTINUEWITHGOGGLE}</StyledText>
