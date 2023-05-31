@@ -10,13 +10,12 @@ export function LoginInput({ data }: { data: INPUT[] }) {
             returner = (
               <div
                 key={i}
-                className="pl-2 rounded-lg h-16 bg-[#f3f7ff] flex items-center justify-center"
+                className="pl-4 rounded-lg h-16 bg-[#f3f7ff] flex items-center justify-center"
               >
                 {prefix.data}
                 <Input
                   placeholder="large size"
                   className="h-full bg-transparent border-0"
-                  // value={value}
                   onChange={setChange}
                 />
               </div>
@@ -31,7 +30,6 @@ export function LoginInput({ data }: { data: INPUT[] }) {
                 <Input
                   placeholder="large size"
                   className="h-full bg-transparent border-0"
-                  // value={value}
                   onChange={setChange}
                 />
                 {prefix.data}

@@ -28,7 +28,7 @@ export function LoginComponentContent() {
   text-[44px] text-[#233d6b] ;
   `;
   const StyledDiv = twStyled.div`
-  bg-white rounded-xl min-w-[700px] h-[100%] p-16 ml-52 ;
+    rounded-xl h-[100%] w-[100%] overflow-hidden ;
   `;
 
   const inputData: INPUT[] = [

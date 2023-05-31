@@ -10,7 +10,7 @@ const StyledTitleText = twStyled(Text)`
   `;
 
 const StyledDiv = twStyled.div`
-  text-right p-3 mb-16 flex ml-[370px] ;
+   p-3 mb-10 flex justify-end ;
   `;
 
 const StyledText = twStyled(Text)`
@@ -23,12 +23,11 @@ const StyledWrapper = twStyled.div`
 export function LoginSecuredtext() {
   return (
     <StyledDiv>
-      <BiLockAlt size={24} color="#b7bdc9" />
-      <StyledTitleText>{CONSTANT.SECURED}</StyledTitleText>
+        <BiLockAlt size={24} color="#b7bdc9" />
+        <StyledTitleText>{CONSTANT.SECURED}</StyledTitleText>
     </StyledDiv>
   );
 }
-
 export function LoginCheckBox() {
   const onChange = (e: CheckboxChangeEvent) => {
     console.log(`checked = ${e.target.checked}`);
