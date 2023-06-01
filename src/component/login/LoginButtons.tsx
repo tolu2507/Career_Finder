@@ -24,7 +24,13 @@ const StyledDiv = twStyled.div`
   flex items-center space-x-8 justify-center ;
   `;
 
-export function LoginButtons({ handleClick }: { handleClick: () => void }) {
+export function LoginButtons({
+  handleClick,
+  handleLogin,
+}: {
+  handleClick: () => void;
+  handleLogin: () => void;
+}) {
   return (
     <>
       <StyledButtonWrapper>
@@ -34,7 +40,7 @@ export function LoginButtons({ handleClick }: { handleClick: () => void }) {
         <StyledDividerOr>Or</StyledDividerOr>
       </Divider>
       <StyledButtonWrapper>
-        <StyledButtonDefault onClick={handleClick}>
+        <StyledButtonDefault onClick={handleLogin}>
           <StyledDiv>
             <FcGoogle size={34} />
             <StyledText>{CONSTANT.CONTINUEWITHGOGGLE}</StyledText>

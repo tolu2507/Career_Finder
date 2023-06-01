@@ -66,6 +66,11 @@ export function LoginComponentContent() {
     return signIn();
   };
 
+    const handleLogin = () => {
+      console.log(email, password);
+      return navigate("/home");
+    };
+
   return (
     <StyledDiv>
       <StyledTitleText>{CONSTANT.LOGIN}</StyledTitleText>
@@ -74,7 +79,7 @@ export function LoginComponentContent() {
       <br />
       <LoginCheckBox />
       <br />
-      <LoginButtons handleClick={handleSubmit} />
+      <LoginButtons handleClick={handleSubmit} handleLogin={handleLogin} />
       <LoginFooter />
     </StyledDiv>
   );
