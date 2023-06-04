@@ -11,4 +11,7 @@ export const CONSTANT = {
   PARAGRAPH_TEXT:
     "Get the best Tech Stach with our talent expert, we would Nspeed up onboarding and help skip the process if you prefer",
   NEED_AN_EXPERT: "Need A Talent Expert ?",
+  SUCCESS: "Signed In Successfully.",
+  ERROR: "Please Provide Email and PassWord",
+  ERROREMAILORPASSWORD: "Please Provide Email or PassWord",
 };

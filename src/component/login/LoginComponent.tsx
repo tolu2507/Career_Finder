@@ -1,36 +1,35 @@
-import { Col } from "antd";
-import { TitleSubComponent } from "./LoginSubComponentBottom";
-import { LoginComponentContent } from "./LoginSubComponentTop";
-import twStyled from "tailwind-styled-components";
+import { CONSTANT } from "../../constants";
+import FormComponent, { FormTypes } from "../form/Form";
+import { StyledLoginComponent, StyledLoginText } from "./styles/styles";
+import { useNavigate } from "react-router-dom";
+import { message } from "antd";
+export function LoginComponent({ formData }: { formData: FormTypes[] }) {
+  let navigate = useNavigate();
 
-export function LoginComponent({
-  height,
-  width,
-}: {
-  height: number;
-  width: number;
-}) {
-  const StyledColumnLeft = twStyled(
-    Col
-  )`rounded-xl flex bg-white h-[100%] min-w-[420px] p-12 ;`;
-
-  const StyledColumnRight = twStyled(
-    Col
-  )`rounded-xl h-[100%] items-center min-w-[300px] flex text-white ;`;
-
-  const StyledDiv = twStyled.div`py-14 mx-[10%] flex min-w-[850px] min-h-[950px] ;`;
-  let diBox = (width * 10) / 100;
+  const handleSubmit = (values: any) => {
+    console.log(values.email, values.password);
+    if (!values.email && !values.password) {
+      message.error(CONSTANT.ERROR);
+      return;
+    }
+    if (!values.email || !values.password) {
+      message.error(CONSTANT.ERROREMAILORPASSWORD);
+      return;
+    }
+    message.success(CONSTANT.SUCCESS);
+    return navigate("/home");
+    
+  };
 
   return (
-    <div className="flex">3
-      <StyledDiv style={{ height: height, width: width }}>
-        <StyledColumnLeft style={{ width: width / 2 - diBox }}>
-          <LoginComponentContent />
-        </StyledColumnLeft>
-        <StyledColumnRight style={{ width: width / 2 - diBox }}>
-          <TitleSubComponent />
-        </StyledColumnRight>
-      </StyledDiv>
-    </div>
+    <StyledLoginComponent>
+      <div className=" p-2 md:py-8">
+        <StyledLoginText>{CONSTANT.LOGIN}</StyledLoginText>
+      </div>
+      <FormComponent
+        data={formData}
+        onFinish={handleSubmit}
+      />
+    </StyledLoginComponent>
   );
 }

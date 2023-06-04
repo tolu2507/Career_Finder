@@ -1,50 +1,21 @@
 import { Input } from "antd";
 
-export function LoginInput({ data }: { data: INPUT[] }) {
+export default function LoginInput({ icon, input }: INPUT) {
   return (
-    <div className=" space-y-6">
-      {Array.isArray(data) &&
-        data.map(({ value, setChange, prefix }, i) => {
-          let returner = <></>;
-          if (prefix.position === "left") {
-            returner = (
-              <div
-                key={i}
-                className="pl-4 rounded-lg h-16 bg-[#f3f7ff] flex items-center justify-center"
-              >
-                {prefix.data}
-                <Input
-                  placeholder="large size"
-                  className="h-full bg-transparent border-0"
-                  onChange={setChange}
-                />
-              </div>
-            );
-          }
-          if (prefix.position === "right") {
-            returner = (
-              <div
-                key={i}
-                className="pl-2 rounded-lg h-16 bg-[#ffff] flex items-center justify-center"
-              >
-                <Input
-                  placeholder="large size"
-                  className="h-full bg-transparent border-0"
-                  onChange={setChange}
-                />
-                {prefix.data}
-              </div>
-            );
-          }
-
-          return returner;
-        })}
+    <div className="md:h-[70px] flex items-center justify-center space-x-2 bg-[#e8f0fe] rounded-lg">
+      {icon}
+      <Input
+        placeholder={input.placeholder}
+        size="large"
+        type={input.type}
+        bordered={input.bordered}
+        className="bg-[transparent] h-full"
+      />
     </div>
   );
 }
 
 export interface INPUT {
-  value: string;
-  setChange: () => any;
-  prefix: { data: any; position: "left" | "right" };
+  icon: JSX.Element;
+  input: { placeholder: string; type: string; bordered: boolean };
 }

@@ -4,13 +4,13 @@ import { CONSTANT } from "../../constants";
 
 const { Title } = Typography;
 
-export function TitleSubComponent() {
+export function TitleTextComponent() {
   return (
-    <div className="flex items-center justify-center ml-[15%]">
-      <div className=" bg-blue-600 w-10 flex rounded-lg h-10 items-center justify-center">
-        <InfoCircleOutlined style={{ fontSize: 25 }} />
+    <div className="text-white md:ml-40 flex">
+      <div className=" bg-loginicon w-10 flex text-white rounded-lg h-10 items-center justify-center">
+        <InfoCircleOutlined style={{ fontSize: 25 }} color="white" />
       </div>
-      <div className="h-10 text-red-900">
+      <div className="ml-2 h-10 text-red-900">
         <Title level={2} style={{ color: "white" }}>
           {CONSTANT.TITLE}
         </Title>

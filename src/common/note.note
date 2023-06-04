@@ -1,0 +1,18 @@
+const SIGN_IN_MUTATION = gql`
+mutation SignIn($email: String!, $password: String!) {
+    signIn(email: $email, password: $password)
+}
+`;
+
+import { useMutation, gql } from "@apollo/client";
+
+ const [signIn] = useMutation(SIGN_IN_MUTATION, {
+    variables: { email, password },
+    onCompleted: (data) => {
+      console.log("Signed in successfully!");
+      // Handle successful sign-in, such as storing the token and redirecting
+      if (data) {
+        navigate("/home");
+      }
+    },
+  });
