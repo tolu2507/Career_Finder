@@ -14,14 +14,14 @@ export default function HomeFooter() {
     <div className="w-[100%] px-2">
       <div className="flex justify-between items-center text-center my-20">
         {companies.map(({ id, name }) => (
-          <Text className=" font-semibold text-slate-700 text-lg" key={id}>
+          <Text className=" font-semibold text-[#a2afc4] text-lg" key={id}>
             {name}
           </Text>
         ))}
       </div>
       <div className="flex items-center h-2 space-x-[2px] justify-center">
         {[1, 2].map((item) => (
-          <div className=" bg-blue-200 h-full w-2 rounded-full" key={item} />
+          <div className=" bg-dark h-full w-2 rounded-full" key={item} />
         ))}
       </div>
     </div>

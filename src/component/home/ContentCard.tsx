@@ -10,7 +10,7 @@ export default function ContentCard() {
       <Title level={4} style={{ color: "white" }}>
         {CONSTANT.NEED_AN_EXPERT}
       </Title>
-      <Paragraph className=" pr-[120px] text-slate-200">
+      <Paragraph className=" pr-[120px] text-white">
         {CONSTANT.PARAGRAPH_TEXT}
       </Paragraph>
       <div className="flex items-center justify-between">
@@ -19,14 +19,14 @@ export default function ContentCard() {
           <div className="flex items-center h-2 space-x-[2px] justify-between">
             {[1, 2, 3].map((item) => (
               <div
-                className=" bg-slate-200 h-full w-2 rounded-full"
+                className=" bg-lightblue h-full w-2 rounded-full"
                 key={item}
               />
             ))}
           </div>
         </div>
         <Button
-          className="bg-teal-500 text-[14px] font-semibold hover:bg-teal-200 text-slate-200 border-0 px-6 h-12"
+          className=" bg-green text-[14px] font-semibold hover:bg-teal-200 text-slate-200 border-0 px-6 h-12"
           onClick={() => console.log("you clicked me")}
         >
           Schedule A call Now

@@ -2,6 +2,10 @@ import HeaderContainer from "../container/home/HeaerContainer";
 import HomePageContainer from "../container/home/HomePageContainer";
 import HomeContentContainer from "../container/home/HomeContentContainer";
 import { HomeHeader } from "../component/home/HomeHeader";
+import {
+  HomeContentLefttContainer,
+  HomeContentRightContainer,
+} from "../container/home/HomeContentsContainer";
 
 export const Home: React.FC = () => {
   return (
@@ -10,7 +14,10 @@ export const Home: React.FC = () => {
         <HeaderContainer>
           <HomeHeader />
         </HeaderContainer>
-        <HomeContentContainer />
+        <HomeContentContainer>
+          <HomeContentRightContainer />
+          <HomeContentLefttContainer />
+        </HomeContentContainer>
       </>
     </HomePageContainer>
   );
